@@ -3,14 +3,14 @@ import CheckBox from './checkbox/checkBox';
 import './App.css';
 import Variant from './checkbox/variant';
 
-function handler() {
-  console.log('Clicked');
+function handler(checked: boolean) {
+  console.log(checked);
 }
 
 function App() {
   return (
     <>
-      <CheckBox id='ch1' label='CheckBox' onclick={handler} gap='space-x-6' width='w-7' height='h-7' textSize='text-2xl' variant={Variant.DEFAULT}/>
+      <CheckBox id='ch1' label='CheckBox' onClick={handler} gap='space-x-6' width='w-7' height='h-7' textSize='text-2xl' />
     </>
   );
 }
